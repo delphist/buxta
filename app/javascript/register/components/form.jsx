@@ -71,32 +71,37 @@ class Form extends React.Component {
         <div className="rd-mailform-container">
           <form method="post" onSubmit={handleSubmit(::this.submit)} className="rd-mailform rd-mailform--skin-1">
             <input type="hidden" name="form-type" value="contact" />
-            <fieldset className="input-container">
-              <div>
-                <Field
-                  name="name"
-                  component={RenderField}
-                  type="text"
-                  placeholder="Ваше имя *"
-                  validate={[validations.required]}
-                  />
-                <Field
-                  name="phone"
-                  component={RenderField}
-                  type="text"
-                  placeholder="Номер телефона *"
-                  validate={[validations.required, validations.phoneRus]}
-                  />
-                <Field
-                  name="license"
-                  component={RenderField}
-                  type="text"
-                  placeholder="Гос. номер автомобиля *"
-                  validate={[validations.required]}
-                  />
-              </div>
+            <div className="form-container">
+              <fieldset className="input-container input-container--buxta">
+                <div>
+                  <Field
+                    name="name"
+                    component={RenderField}
+                    type="text"
+                    placeholder="ФИО *"
+                    validate={[validations.required]}
+                    />
+                </div>
+                <div>
+                  <Field
+                    name="phone"
+                    component={RenderField}
+                    type="text"
+                    placeholder="Номер телефона *"
+                    validate={[validations.required, validations.phoneRus]}
+                    />
+                </div>
+                <div>
+                  <Field
+                    name="license"
+                    component={RenderField}
+                    type="text"
+                    placeholder="Гос. номер автомобиля *"
+                    validate={[validations.required]}
+                    />
+                </div>
             </fieldset>
-            <label data-add-placeholder="">
+              <label className="form-about" data-add-placeholder="">
               <Field
                 name="about"
                 component={RenderField}
@@ -105,11 +110,13 @@ class Form extends React.Component {
                 validate={[validations.required, validations.smallAbout]}
                 warn={[validations.warnSmallAbout]}
                 />
-            </label>
+              </label>
+            </div>            
+            
             <FieldArray name="photos" component={::this.renderFiles} validate={[validations.requiredPhotos]} />
-            <div className="mfControls text-center">
+            <div className="mfControls text-center form-buttons">
               <button className="btn btn-md btn-secondary" onClick={::this.onUploadClick}>Прикрепить фотографии</button>
-              <button className="btn btn-md btn-secondary-2" type="submit" disabled={submitting}>Подать заявку</button>
+              <button className="btn btn-md btn-secondary" type="submit" disabled={submitting}>Подать заявку</button>
             </div>
           </form>
         </div>

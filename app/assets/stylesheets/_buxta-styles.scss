@@ -1,0 +1,92 @@
+.about-container {
+  max-width: 660px;
+  text-align: justify;
+  margin: 50px auto 100px;
+  
+  h2 {
+    text-align: center;
+  }
+}
+
+.about-image {
+  background-color: #E8EFFB;
+  background-image: url(../images/about.jpg);
+  background-size: cover; 
+  background-position: center center;
+  height: 600px;
+}
+
+.input-container--buxta {
+  @media (min-width: 768px) {
+    background-color: transparent !important;
+    border-width: 0 !important;
+    margin-right: 2rem;
+    width: 90%;
+  }
+
+  > div + div {
+    margin-top: 2rem;
+  }
+}
+
+.form-container {
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  input, textarea {
+    border-radius: 0 !important;
+    background-color: $input-bg !important;
+  }
+}
+
+.form-about {
+  @media (min-width: 768px) {
+    margin-top: 0 !important;
+  }
+
+  textarea {
+    height: 263px !important;
+  }
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+
+  @media(min-width: 992px) {
+    margin-left: 42px;
+    flex-direction: row;
+
+    .btn:first-child {
+      margin-right: 30px;
+    }
+  }
+  
+  @media(min-width: 1200px) {
+    margin-left: 150px;
+  }
+
+}
+
+.head-icons {
+  .icon {
+    font-size: 30px;
+    border-width: 0;
+  }
+}
+
+.buxta-instagram {
+  color: #45668e !important;
+  border-color: #45668e !important;
+}
+
+.btn {
+  border-radius: 0 !important;
+}
+
+.mb-3 {
+  margin-bottom: 2.5rem;
+}
