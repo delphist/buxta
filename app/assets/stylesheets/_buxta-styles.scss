@@ -8,12 +8,37 @@
   }
 }
 
+.about-description {
+  color: #fff;
+  max-width: 660px;
+  text-align: justify;
+  margin: 0 auto;
+  padding: 100px 0;
+  
+  h3 {
+    color: #fff !important;
+    margin: 1rem 0 2rem;
+  }
+  
+  ul {
+    margin: 1rem 2rem;
+    
+    li {
+      font-style: italic;
+    }
+  }
+}
+
+.well-cover {
+  min-height: calc(100vh - 120px) !important;
+}
+
 .about-image {
   background-color: #E8EFFB;
   background-image: url(../images/about.jpg);
   background-size: cover; 
   background-position: center center;
-  height: 600px;
+  min-height: 600px;
 }
 
 .input-container--buxta {
@@ -37,7 +62,7 @@
   }
 
   input, textarea {
-    border-radius: 0 !important;
+    border-radius: 4px !important;
     background-color: $input-bg !important;
   }
 }
@@ -84,7 +109,7 @@
 }
 
 .btn {
-  border-radius: 0 !important;
+  border-radius: 4px !important;
 }
 
 .mb-3 {
