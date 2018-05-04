@@ -1,4 +1,4 @@
-server 'shishkifest.ru',
+server 'buxta.su',
   roles: %w[app db web],
   ssh_options: {
     user: fetch(:user),
@@ -7,9 +7,9 @@ server 'shishkifest.ru',
   }
 
 set :rails_env, 'production'
-set :deploy_to, "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
+set :deploy_to, "/home/#{fetch(:user)}/applications/#{fetch(:application)}"
 
-set :nginx_server_name, 'shishkifest.ru'
+set :nginx_server_name, 'buxta.su'
 set :nginx_sites_available_path, "/etc/nginx/sites-available"
 set :nginx_sites_enabled_path, "/etc/nginx/conf.d"
 

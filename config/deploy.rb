@@ -1,11 +1,12 @@
 # config valid only for current version of Capistrano
-lock '3.8.2'
+lock '3.10.2'
 
-set :application, 'shishkifest'
-set :repo_url, 'git@github.com:delphist/shishkifest.git'
+set :application, 'buxta'
+set :repo_url, 'git@github.com:delphist/buxta.git'
 set :user, 'deploy'
 
-set :rvm_ruby_version, "#{File.read('.ruby-version').strip}@#{fetch :stage}"
+set :rbenv_type, :user
+set :rbenv_ruby, '2.4.2'
 
 append :linked_files, 'config/database.yml', 'config/application.yml'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system', 'public/uploads'

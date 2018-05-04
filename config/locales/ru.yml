@@ -6,7 +6,7 @@ ru:
   errors:
     correct_code?: "Неверный код подтверждения"
   active_admin:
-    title: Шишки
+    title: Бухта
     new_model: "Создать"
     edit_model: "Изменить"
     delete_model: "Удалить"

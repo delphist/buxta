@@ -9,7 +9,7 @@ require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 
 # Load RVM
-require 'capistrano/rvm'
+require 'capistrano/rbenv'
 
 # Load Rails
 require 'capistrano/bundler'
