@@ -50,7 +50,7 @@ class Form extends React.Component {
             component={this.renderFilePreview}
           />
         )}
-        {meta.submitFailed && meta.error && <span>{meta.error}</span>}
+        {meta.submitFailed && meta.error && <span className="error">{meta.error}</span>}
       </div>
     )
   }
@@ -91,15 +91,6 @@ class Form extends React.Component {
                     validate={[validations.required, validations.phoneRus]}
                     />
                 </div>
-                <div>
-                  <Field
-                    name="license"
-                    component={RenderField}
-                    type="text"
-                    placeholder="Гос. номер автомобиля *"
-                    validate={[validations.required]}
-                    />
-                </div>
             </fieldset>
               <label className="form-about" data-add-placeholder="">
               <Field
@@ -111,8 +102,8 @@ class Form extends React.Component {
                 warn={[validations.warnSmallAbout]}
                 />
               </label>
-            </div>            
-            
+            </div>
+
             <FieldArray name="photos" component={::this.renderFiles} validate={[validations.requiredPhotos]} />
             <div className="mfControls text-center form-buttons">
               <button className="btn btn-md btn-secondary" onClick={::this.onUploadClick}>Прикрепить фотографии</button>

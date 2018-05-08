@@ -6,7 +6,6 @@ class Api::Members < Grape::API
       requires :code, type: String
       requires :name, type: String
       requires :phone, type: String
-      requires :license, type: String
       requires :about, type: String
       requires :photos, type: Array do
         requires :id, type: Integer

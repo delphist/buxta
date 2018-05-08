@@ -3,7 +3,6 @@ class Member::RegisterForm < ApplicationForm
   property :code, virtual: true
 
   property :name
-  property :license
   property :about
   property :phone
 
@@ -28,7 +27,6 @@ class Member::RegisterForm < ApplicationForm
     required(:code).filled(:correct_code?)
 
     required(:name).filled
-    required(:license).filled
     required(:about).filled
 
     required(:photos).each do

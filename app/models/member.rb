@@ -19,7 +19,7 @@ class Member < ApplicationRecord
   has_many :sms_histories
   phony_normalize :phone, country_code: 'RU'
 
-  validates :name, :phone, :license, :about, presence: true
+  validates :name, :phone, :about, presence: true
 
   aasm column: 'state' do
     state :created, initial: true
