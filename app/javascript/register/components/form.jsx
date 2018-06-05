@@ -91,6 +91,23 @@ class Form extends React.Component {
                     validate={[validations.required, validations.phoneRus]}
                     />
                 </div>
+                <div>
+                  <Field
+                    name="city"
+                    component={RenderField}
+                    type="text"
+                    placeholder="Город *"
+                    validate={[validations.required]}
+                    />
+                </div>
+                <div>
+                  <Field
+                    name="instagram"
+                    component={RenderField}
+                    type="text"
+                    placeholder="@Instagram"
+                    />
+                </div>
             </fieldset>
               <label className="form-about" data-add-placeholder="">
               <Field
